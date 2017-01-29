@@ -6,12 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "webpack --progress --colors",
-    "start": "webpack-dev-server --content-base bin --progress --colors --host 0.0.0.0 --no-info"
+    "start": "webpack-dev-server --content-base bin --progress --colors --host 0.0.0.0 --hot"
   },
   "author": "Felquis",
   "license": "MIT",
   "dependencies": {
-    "babel-preset-react": "^6.22.0",
+    "express": "4.14.1",
     "react": "15.4.2",
     "react-dom": "15.4.2"
   },
@@ -19,6 +19,11 @@
     "babel-core": "6.22.1",
     "babel-loader": "6.2.10",
     "babel-preset-es2015": "6.22.0",
+    "babel-preset-react": "6.22.0",
+    "css-loader": "0.26.1",
+    "html-loader": "0.4.4",
+    "html-webpack-plugin": "2.26.0",
+    "style-loader": "0.13.1",
     "webpack": "1.14.0",
     "webpack-dev-server": "1.16.2"
   }

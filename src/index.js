@@ -1,14 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { render } from 'react-dom'
 
-class App extends Component {
-  render () {
-    return (
-      <div>
-        <h1>Hello World</h1>
+import Header from './components/Header'
 
-        <p>This is my show!</p>
-      </div>
-    )
-  }
+const App = () => {
+  return (
+    <div>
+      <Header title="Hello World 3" />
+
+      <p>This is my show!</p>
+    </div>
+  )
 }
+
+render(<App />, document.querySelector('#root'))
