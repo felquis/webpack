@@ -4,7 +4,7 @@
   "description": "Webpack Examples",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "bundle": "webpack --progress --colors --config webpack.prod.js -p --optimize-dedupe",
     "start": "webpack-dev-server --content-base bin --progress --colors --host 0.0.0.0 --hot",
     "storybook": "start-storybook -p 6006",
@@ -18,7 +18,9 @@
     "react-dom": "15.4.2"
   },
   "devDependencies": {
+    "@kadira/storybook": "2.21.0",
     "babel-core": "6.22.1",
+    "babel-jest": "18.0.0",
     "babel-loader": "6.2.10",
     "babel-preset-es2015": "6.22.0",
     "babel-preset-react": "6.22.0",
@@ -26,9 +28,17 @@
     "extract-text-webpack-plugin": "1.0.1",
     "html-loader": "0.4.4",
     "html-webpack-plugin": "2.26.0",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "18.1.0",
+    "react-test-renderer": "15.4.2",
+    "storyshots": "3.2.1",
     "style-loader": "0.13.1",
     "webpack": "1.14.0",
-    "webpack-dev-server": "1.16.2",
-    "@kadira/storybook": "^2.21.0"
+    "webpack-dev-server": "1.16.2"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
   }
 }
