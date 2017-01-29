@@ -1,0 +1,19 @@
+exports[`test should be ok 1`] = `
+<header
+  className="header"
+  onClick={[Function]}>
+  <h1>
+    Hello World
+  </h1>
+</header>
+`;
+
+exports[`test should be ok 2`] = `
+<header
+  className="header"
+  onClick={[Function]}>
+  <h1>
+    Another Title
+  </h1>
+</header>
+`;

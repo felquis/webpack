@@ -1,14 +1,30 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styles from './style.css'
 
-const Header = (props) => {
-  console.log(styles)
+class Header extends Component {
+  constructor(props) {
+    super(props)
 
-  return (
-    <header className={styles.header}>
-      <h1>{props.title}</h1>
-    </header>
-  )
+    this.state = {
+      title: this.props.title
+    }
+
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick () {
+    this.setState({
+      title: 'Another Title'
+    })
+  }
+
+  render () {
+    return (
+      <header onClick={this.handleClick} className={styles.header}>
+        <h1>{this.state.title}</h1>
+      </header>
+    )
+  }
 }
 
 export default Header
